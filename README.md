@@ -20,4 +20,5 @@ Here's a gif of what the script does:
 
 ## Module Used:
 This project was made entirely using Selenium, a python module that helps in web automation and data scraping.
+
 Documentation: https://selenium-python.readthedocs.io/

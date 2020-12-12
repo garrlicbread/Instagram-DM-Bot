@@ -19,6 +19,5 @@ Here's a gif of what the script does:
 3) Not every meeded element is of the same type, sometimes the script looks for XPATHS, sometimes it looks for CSS Selectors. These elements were decided after conducting vigorous trial and errors
 
 ## Module Used:
-This project was made entirely using Selenium, a python module that helps in web automation and data scraping. 
-
+This project was made entirely using Selenium, a python module that helps in web automation and data scraping.
 Documentation: https://selenium-python.readthedocs.io/

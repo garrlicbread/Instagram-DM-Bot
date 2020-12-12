@@ -21,5 +21,5 @@ Here's a gif of what the script does:
 2) The speed of the script depends on the speed of the Internet. If it's too slow, the program might fail.
 3) Not every meeded element is of the same type, sometimes the script looks for XPATHS, sometimes it looks for CSS Selectors. These elements were decided after conducting vigorous trial and errors
 
-## Thanks:
-Documentation: https://selenium-python.readthedocs.io/
+## Selenium documentation: 
+https://selenium-python.readthedocs.io/

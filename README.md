@@ -14,7 +14,7 @@ The script describes the steps to follow in order to DM a person on Instagram to
 
 Here's a gif of what the script does:
 
-![Alt text](instagram_dm(fast).gif) 
+![Alt text](Instagram_DM(Fast).gif) 
 
 ### Thanks:
 Selenium: https://selenium-python.readthedocs.io/

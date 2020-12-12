@@ -12,11 +12,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# Defining a function that follows the steps
+# Defining a class that does the job for us
 class DMBot:
     def __init__(self, user, pw, name, text1, text2):
         
-        self.driver = webdriver.Firefox(executable_path = "C:\Program Files (x86)\geckodriver.exe")
+        self.driver = webdriver.Firefox(executable_path = "C:\Program Files (x86)\geckodriver.exe") # Enter webdriver path 
         self.driver.get("https://www.instagram.com/?hl=en")
     
         WebDriverWait(self.driver, 2).until(EC.visibility_of_element_located((By.NAME, "username"))).send_keys(user)
@@ -60,19 +60,21 @@ class DMBot:
         test.send_keys(Keys.SHIFT, Keys.ENTER)
         test.send_keys(text2)
         test.send_keys(Keys.ENTER)
-
-# Initializing ending time
-end = time.time()
+        time.sleep(3)
+        self.driver.close()
+        
+# time.sleep(1)
 
 # Entering credentials
 IG_username = "" # Enter username
 Password = "" # Enter password
 Person_to_Dm = str(input("Enter name of recipient: ")) # Enter follower who you want to text 
-text1 = (f"**Hello, the following dm was sent using a (slightly faster) python bot made by Sukant Sindhwani. He wishes you a good day! This bot completes its task in ~20 seconds. :) **")
+text1 = ("**Hello, the following dm was sent using a (slightly faster) python bot made by Sukant Sindhwani. He wishes you a good day!**")
 text2 = str(input("Enter message: ")) # Enter the message 
 
 # Calling the class 
 DMBot(IG_username, Password, Person_to_Dm, text1, text2) 
 
 # Printing execution time
-print(f"Runtime of the program is {round((end - start), 2)} seconds.")
+end = time.time()
+print(f"\nThis program completes it's task in {round((end - start), 2)} seconds.")

@@ -1,10 +1,7 @@
 # Instagram bot that DMs your friends effortlessly.
 
-# Initializing start time
-import time
-start = time.time()
-
 # Importing libraries
+import time
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -62,7 +59,7 @@ class DMBot:
         self.driver.find_element_by_xpath("/html/body/div[1]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea")\
             .send_keys(text2)
         test.send_keys(Keys.ENTER)
-        time.sleep(2)
+        time.sleep(5)
         self.driver.close()
 
 # time.sleep(1)
@@ -74,9 +71,12 @@ Person_to_Dm = str(input("Enter name of recipient: ")) # Enter follower who you 
 text1 = ("**Hello, the following dm was sent using a python bot made by Sukant Sindhwani. He wishes you a good day!**")
 text2 = str(input("Enter message: ")) # Enter the message 
 
+# Initializing start time
+start = time.time()
+
 # Calling the class 
 DMBot(IG_username, Password, Person_to_Dm, text1, text2) 
 
 # Printing execution time
 end = time.time()
-print(f"\nThis program completes it's task in {round((end - start), 2)} seconds.")
+print(f"\nThis program completes it's task in {round(((end - start) - 5), 2)} seconds.")

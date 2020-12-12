@@ -1,10 +1,7 @@
 # Instagram bot that DMs your friends effortlessly (Faster version)
 
-# Initializing start time
-import time
-start = time.time()
-
 # Importing libraries
+import time
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -14,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # Defining a class that does the job for us
 class DMBot:
-    def __init__(self, user, pw, name, text1, text2):
+    def __init__(self, user, pw, name, text):
         
         self.driver = webdriver.Firefox(executable_path = "C:\Program Files (x86)\geckodriver.exe") # Enter webdriver path 
         self.driver.get("https://www.instagram.com/?hl=en")
@@ -49,18 +46,18 @@ class DMBot:
         # WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.CSS_SELECTOR,
         #                                                                       ".sqdOP")))\
         #     .click()
-            
+       
         WebDriverWait(self.driver, 4).until(EC.visibility_of_element_located((By.CSS_SELECTOR,
                                                                               ".ItkAi > textarea:nth-child(1)")))\
-            .send_keys(text1)
+            .send_keys("**Hi, the following DM was sent using a python bot made by Sukant Sindhwani.**")
     
         test = self.driver.find_element_by_xpath("/html/body/div[1]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea")    
         test.send_keys(Keys.SHIFT, Keys.ENTER)
         test.send_keys(Keys.SHIFT, Keys.ENTER)
         test.send_keys(Keys.SHIFT, Keys.ENTER)
-        test.send_keys(text2)
+        test.send_keys(text)
         test.send_keys(Keys.ENTER)
-        time.sleep(3)
+        time.sleep(6)
         self.driver.close()
         
 # time.sleep(1)
@@ -69,12 +66,14 @@ class DMBot:
 IG_username = "" # Enter username
 Password = "" # Enter password
 Person_to_Dm = str(input("Enter name of recipient: ")) # Enter follower who you want to text 
-text1 = ("**Hello, the following dm was sent using a (slightly faster) python bot made by Sukant Sindhwani. He wishes you a good day!**")
-text2 = str(input("Enter message: ")) # Enter the message 
+text = str(input("Enter message: ")) # Enter the message 
 
+# Initializing start time
+start = time.time()
+        
 # Calling the class 
-DMBot(IG_username, Password, Person_to_Dm, text1, text2) 
+DMBot(IG_username, Password, Person_to_Dm, text) 
 
 # Printing execution time
 end = time.time()
-print(f"\nThis program completes it's task in {round((end - start), 2)} seconds.")
+print(f"\nThis program completes it's task in {round(((end - start) - 5), 2)} seconds.")

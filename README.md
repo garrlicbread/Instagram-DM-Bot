@@ -8,7 +8,7 @@ This script automates the entire process and messages the person of your choice 
 This project was made using Selenium, a python module that helps in web automation and data scraping. 
 
 ## Process:
-The script describes the steps to follow in order to DM a person on Instagram to selenium. The steps include logging in, disabling prompts, searching for the person, opening their profile, and finally sending a message. There are two versions of this script, the first version manually pauses the program after every step before the page gets loaded while the second script uses a method called **WebDriverWait** that automatically halts the program until it detects the HTML element that it requires to perform the next step. Using **WebDriverWait** reduces the execution time from ~40 seconds to ~20 seconds, thus, increasing the speed by 200%
+The script describes the steps to follow in order to DM a person on Instagram to selenium. The steps include logging in, disabling prompts, searching for the person, opening their profile, and finally sending a message. There are two versions of this script, the first version manually pauses the program after every step before the page gets loaded while the second script uses a method called **WebDriverWait** that automatically halts the program until it detects the HTML element that it requires to perform the next step. Using **WebDriverWait** reduces the execution time from ~45 seconds to ~20 seconds, thus, increasing the speed by over 200%
 
 ## Output:
 

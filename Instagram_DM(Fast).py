@@ -57,7 +57,7 @@ class DMBot:
         test.send_keys(Keys.SHIFT, Keys.ENTER)
         test.send_keys(text)
         test.send_keys(Keys.ENTER)
-        time.sleep(6)
+        time.sleep(5)
         self.driver.close()
         
 # time.sleep(1)

@@ -17,7 +17,7 @@ Here's a gif of what the script does:
 ![Alt text](Instagram_Dm_Fast.gif) 
 
 ## Notes:
-1) The script executes on Firefox so it's webdriver i.e. Geckodriver.exe is used. To use the script on any other browser, please download the relevant drivers.
+1) The script executes on Firefox so the Geckodriver.exe is used. To use the script on any other browser, please download the relevant drivers.
 2) The speed of the script depends on the speed of the Internet. If it's too slow, the program might fail.
 3) Not every needed element is of the same type, sometimes the script looks for XPATHS, sometimes it looks for CSS Selectors. These elements were decided after conducting vigorous trials and errors.
 
